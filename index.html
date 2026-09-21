@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saurabh (Karan) Agrawal — Backend &amp; AI Engineer</title>
+<meta name="description" content="Backend engineer (ex-PayPal) building low-latency payments and fraud-decisioning systems, plus multi-agent AI platforms. San Jose, CA.">
+<link rel="canonical" href="https://saurabhkaran11.github.io/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Saurabh (Karan) Agrawal — Backend &amp; AI Engineer">
+<meta property="og:description" content="Payments &amp; fraud systems · Multi-agent AI · RAG · MCP · FastAPI">
+<meta property="og:url" content="https://saurabhkaran11.github.io/">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/61040397?v=4">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Saurabh (Karan) Agrawal — Backend &amp; AI Engineer">
+<meta name="twitter:description" content="Payments &amp; fraud systems · Multi-agent AI · RAG · MCP · FastAPI">
+<link rel="icon" href="https://avatars.githubusercontent.com/u/61040397?s=64&amp;v=4">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Saurabh (Karan) Agrawal",
+  "url": "https://saurabhkaran11.github.io/",
+  "image": "https://avatars.githubusercontent.com/u/61040397?v=4",
+  "jobTitle": "Backend Engineer",
+  "email": "mailto:saurabhkaran11@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "San Jose", "addressRegion": "CA", "addressCountry": "US" },
+  "sameAs": [
+    "https://github.com/Saurabhkaran11",
+    "https://www.linkedin.com/in/saurabhagrawal11/"
+  ],
+  "knowsAbout": ["Payments", "Fraud detection", "Distributed systems", "Multi-agent AI", "RAG", "Model Context Protocol", "WebMCP", "Agentic systems", "FastAPI", "Next.js"]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#0b0d12; --bg2:#12151d; --card:#161a24; --line:#242939;
+    --text:#e8eaf0; --muted:#98a0b3; --accent:#5eead4; --accent2:#818cf8; --warm:#fbbf24;
+    --radius:14px; --max:1080px;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#f7f8fb; --bg2:#eef0f5; --card:#fff; --line:#e0e3ec;
+      --text:#141821; --muted:#5a6175; --accent:#0d9488; --accent2:#4f46e5; --warm:#b45309;
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#f7f8fb; --bg2:#eef0f5; --card:#fff; --line:#e0e3ec;
+    --text:#141821; --muted:#5a6175; --accent:#0d9488; --accent2:#4f46e5; --warm:#b45309;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  /* clip (not hidden) so the sticky nav keeps working */
+  html{scroll-behavior:smooth;overflow-x:clip}
+  body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+  /* ---------- nav ---------- */
+  nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-.5px;font-size:1.05rem}
+  .logo span{color:var(--accent)}
+  .links{display:flex;gap:22px;align-items:center;font-size:.92rem;color:var(--muted)}
+  .links a{transition:color .2s}
+  .links a:hover{color:var(--text)}
+  .theme{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:5px 10px;cursor:pointer;font-size:.9rem;line-height:1}
+  @media(max-width:640px){.links a.hide-sm{display:none}.links{gap:16px}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:80px 0 60px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;top:-220px;right:-140px;width:600px;height:600px;border-radius:50%;
+    background:radial-gradient(circle,color-mix(in srgb,var(--accent2) 26%,transparent),transparent 62%);pointer-events:none}
+  .hero .wrap{position:relative}
+  .hero-top{display:grid;grid-template-columns:1fr auto;gap:44px;align-items:center}
+  .tag{display:inline-flex;gap:9px;align-items:center;font-size:.8rem;color:var(--accent);
+    border:1px solid color-mix(in srgb,var(--accent) 38%,transparent);padding:5px 13px;border-radius:99px;margin-bottom:22px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+  h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(2.2rem,5.6vw,3.7rem);line-height:1.06;letter-spacing:-1.6px}
+  h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{color:var(--muted);font-size:1.1rem;max-width:580px;margin:20px 0 30px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{padding:11px 20px;border-radius:10px;font-weight:600;font-size:.94rem;border:1px solid var(--line);transition:transform .2s,background .2s}
+  .btn.primary{background:var(--accent);color:#06201c;border-color:var(--accent)}
+  .btn:hover{transform:translateY(-2px)}
+  .avatar{width:190px;height:190px;border-radius:24px;border:1px solid var(--line);
+    box-shadow:0 22px 60px -22px color-mix(in srgb,var(--accent2) 65%,transparent)}
+  @media(max-width:760px){.hero-top{grid-template-columns:1fr}.avatar{width:110px;height:110px;order:-1;border-radius:18px}}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+    border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:56px}
+  .stat{background:var(--bg2);padding:20px}
+  .stat b{font-family:"Space Grotesk",sans-serif;font-size:1.5rem;display:block;line-height:1.2}
+  .stat small{color:var(--muted);font-size:.8rem}
+  @media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+  section{padding:76px 0}
+  .eyebrow{font-family:"JetBrains Mono",monospace;color:var(--accent);font-size:.78rem;letter-spacing:1.2px;margin-bottom:10px}
+  h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(1.6rem,4vw,2.3rem);letter-spacing:-.8px;margin-bottom:32px}
+  .section-note{color:var(--muted);font-size:.95rem;margin:-20px 0 30px;max-width:620px}
+
+  /* ---------- about ---------- */
+  .about{display:grid;grid-template-columns:1.35fr 1fr;gap:38px}
+  .about p{color:var(--muted);margin-bottom:14px}
+  .about p strong{color:var(--text);font-weight:600}
+  .focus{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;height:fit-content}
+  .focus h3{font-size:.95rem;margin-bottom:12px;font-family:"Space Grotesk",sans-serif}
+  .focus li{list-style:none;padding:9px 0;border-bottom:1px dashed var(--line);color:var(--muted);font-size:.92rem;display:flex;gap:10px}
+  .focus li:last-child{border:none;padding-bottom:0}
+  .focus li::before{content:"→";color:var(--accent);flex-shrink:0}
+  @media(max-width:760px){.about{grid-template-columns:1fr}}
+
+  /* ---------- projects ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;
+    display:flex;flex-direction:column;transition:transform .25s,border-color .25s;position:relative}
+  .card:hover{border-color:color-mix(in srgb,var(--accent) 55%,var(--line));transform:translateY(-4px)}
+  .card .badge{position:absolute;top:20px;right:20px;font-size:.7rem;color:var(--warm);
+    border:1px solid color-mix(in srgb,var(--warm) 45%,transparent);padding:2px 9px;border-radius:99px;white-space:nowrap}
+  .card h3{font-family:"Space Grotesk",sans-serif;font-size:1.22rem;margin-bottom:8px;padding-right:96px}
+  .card p{color:var(--muted);font-size:.92rem;flex:1;margin-bottom:18px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+  .chip{font-family:"JetBrains Mono",monospace;font-size:.71rem;padding:3px 9px;border-radius:6px;
+    background:var(--bg2);color:var(--muted);border:1px solid var(--line)}
+  .card-links{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:auto}
+  .go{font-size:.87rem;font-weight:600;color:var(--accent)}
+  .go.ghost{color:var(--muted)}
+  .go.ghost:hover{color:var(--text)}
+
+  /* ---------- stack ---------- */
+  .stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:18px}
+  .stack > div{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .stack h4{font-size:.83rem;color:var(--muted);font-weight:500;margin-bottom:12px;letter-spacing:.4px;text-transform:uppercase}
+  .stack .chips{margin-bottom:0}
+
+  /* ---------- repos ---------- */
+  #repos .grid{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+  .repo{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:16px;transition:border-color .2s}
+  .repo b{display:block;margin-bottom:4px;font-size:.93rem;font-family:"Space Grotesk",sans-serif}
+  .repo span{color:var(--muted);font-size:.79rem;font-family:"JetBrains Mono",monospace}
+  .repo:hover{border-color:var(--accent)}
+
+  /* ---------- contact ---------- */
+  .contact{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 13%,var(--card)),color-mix(in srgb,var(--accent2) 13%,var(--card)));
+    border:1px solid var(--line);border-radius:22px;padding:52px 28px;text-align:center}
+  .contact p{color:var(--muted);max-width:520px;margin:0 auto 26px}
+  .contact .cta{justify-content:center}
+  footer{padding:28px 0 50px;color:var(--muted);font-size:.84rem;text-align:center}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+    .btn:hover,.card:hover{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">saurabh<span>.</span>dev</a>
+    <div class="links">
+      <a href="#about" class="hide-sm">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#stack" class="hide-sm">Stack</a>
+      <a href="#contact">Contact</a>
+      <button class="theme" id="themeBtn" aria-label="Toggle colour theme" title="Toggle theme">◐</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <div class="tag"><span class="dot"></span>Open to backend &amp; applied-AI roles</div>
+        <h1>Saurabh (Karan) Agrawal<br><span class="grad">Payments, fraud &amp; multi-agent AI.</span></h1>
+        <p class="lede">Backend engineer, formerly at PayPal, building low-latency payment and fraud-decisioning systems — and hackathon-winning multi-agent AI platforms on the side. Based in San Jose, CA.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">See my work</a>
+          <a class="btn" href="https://github.com/Saurabhkaran11" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/saurabhagrawal11/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <!-- Real avatar from GitHub; falls back to an inline monogram if it can't load. -->
+      <img class="avatar" id="avatar"
+           src="https://avatars.githubusercontent.com/u/61040397?v=4"
+           alt="Saurabh Agrawal" width="190" height="190" loading="eager">
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>PayPal</b><small>Payments &amp; fraud backend</small></div>
+      <div class="stat"><b>3 live apps</b><small>Deployed &amp; open to try</small></div>
+      <div class="stat"><b>6.7M</b><small>Cases indexed in LegalMesh</small></div>
+      <div class="stat"><b id="repoCount">35+</b><small>Public repositories</small></div>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="reveal">
+  <div class="wrap">
+    <div class="eyebrow">// about</div>
+    <h2>Systems that have to be fast, correct and trusted.</h2>
+    <div class="about">
+      <div>
+        <p>At <strong>PayPal</strong> I worked on the backend of payment and fraud-decisioning flows — services where every millisecond of latency and every false decline carries a real cost for merchants and customers.</p>
+        <p>Outside of work I build <strong>agentic AI systems</strong>: multi-agent orchestration, retrieval-augmented generation over large corpora, and custom <strong>MCP servers</strong> that give models real tools to use. I enjoy taking an idea from hackathon prototype to something deployed and genuinely usable.</p>
+        <p>I'm at my most useful where distributed-systems discipline meets modern AI tooling.</p>
+      </div>
+      <div class="focus">
+        <h3>Currently focused on</h3>
+        <ul>
+          <li>Agentic systems &amp; multi-agent orchestration</li>
+          <li>RAG over large legal &amp; financial corpora</li>
+          <li>Model Context Protocol (MCP) servers</li>
+          <li>FastAPI &amp; distributed backend design</li>
+          <li>Real-time risk &amp; fraud decisioning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="reveal" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="eyebrow">// selected work</div>
+    <h2>Featured projects</h2>
+    <p class="section-note">Recent builds — several with live deployments you can open right now.</p>
+    <div class="grid">
+
+      <div class="card">
+        <span class="badge">Live demo</span>
+        <h3>PitchCoach</h3>
+        <p>Say your startup pitch out loud and get scored the way a YC partner would, then hear it rewritten in your own voice. Also turns any GitHub repo into a presentable deck with a demo script, Q&amp;A prep and PPTX/PDF export. Built in one hour at OSS4AI, Voice AI track.</p>
+        <div class="chips"><span class="chip">Next.js</span><span class="chip">Voice AI</span><span class="chip">Tailwind</span></div>
+        <div class="card-links">
+          <a class="go" href="https://pitchcoach-five.vercel.app/" target="_blank" rel="noopener">Open live app →</a>
+          <a class="go ghost" href="https://github.com/Saurabhkaran11/pitchcoach" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge">AWS · Strands</span>
+        <h3>IncidentPilot</h3>
+        <p>A green dashboard never tells you which customer requests were recovered. IncidentPilot investigates a failed AWS workflow, prepares a bounded rollback, takes human approval for that exact change, verifies recovery independently, and issues a receipt accounting for every request — including the ones it could not recover.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Strands SDK</span><span class="chip">MCP</span><span class="chip">AWS</span></div>
+        <div class="card-links">
+          <a class="go" href="https://github.com/Saurabhkaran11/IncidentPilot" target="_blank" rel="noopener">View repository →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge">Live demo</span>
+        <h3>Local Loop</h3>
+        <p>A live Shopify storefront where a shopper and a browser agent build the same cart together. WebMCP gives the agent structured actions — search inventory, check stock, update the cart — instead of guessing at buttons, and the shopper keeps control of checkout.</p>
+        <div class="chips"><span class="chip">TypeScript</span><span class="chip">WebMCP</span><span class="chip">Shopify</span></div>
+        <div class="card-links">
+          <a class="go" href="https://web-mcp-mu.vercel.app/" target="_blank" rel="noopener">Open live app →</a>
+          <a class="go ghost" href="https://youtu.be/ER8LuhkWXhM" target="_blank" rel="noopener">Demo video</a>
+          <a class="go ghost" href="https://github.com/Saurabhkaran11/web-mcp" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge">Live demo</span>
+        <h3>EnterpriseOS</h3>
+        <p>An AI employee that operates a business across five connected enterprise tools — inbox, CRM and task tracker — pausing for human approval before any sensitive calendar action, then producing a verified report. Local-first with resettable SQLite state and no API keys required.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Next.js</span><span class="chip">SQLite</span></div>
+        <div class="card-links">
+          <a class="go" href="https://enterprise-os-gamma.vercel.app/" target="_blank" rel="noopener">Open live app →</a>
+          <a class="go ghost" href="https://github.com/Saurabhkaran11/EnterpriseOS" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>ForgeOS</h3>
+        <p>An agentic company-building command center: it turns a business goal into a coordinated team of six AI employees — orchestrator, research, evidence verification, product, prospecting and go-to-market — that research a market, spec an MVP roadmap and draft campaigns, with human approval gating every action.</p>
+        <div class="chips"><span class="chip">TypeScript</span><span class="chip">Multi-agent</span><span class="chip">LLaMA 3.3</span></div>
+        <div class="card-links">
+          <a class="go" href="https://github.com/Saurabhkaran11/ForgeOS" target="_blank" rel="noopener">View repository →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge">Stanford LLM × Law</span>
+        <h3>LegalMesh</h3>
+        <p>Multi-agent legal research platform: seven specialised agents query 6.7M cases across 7 datasets to answer legal questions with cited precedent. Built at Stanford's LLM × Law Hackathon.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Multi-agent</span><span class="chip">RAG</span></div>
+        <div class="card-links">
+          <a class="go" href="https://github.com/Saurabhkaran11/LEGALMESH" target="_blank" rel="noopener">View repository →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Fresh Listings</h3>
+        <p>A production Next.js job-search workspace. Collects roles from approved public providers, keeps each user's searches in managed Postgres, syncs saved jobs to Google Drive and Sheets, and layers on optional AI, email, Telegram and realtime features.</p>
+        <div class="chips"><span class="chip">Next.js</span><span class="chip">Neon Postgres</span><span class="chip">NextAuth</span><span class="chip">Vercel</span></div>
+        <div class="card-links">
+          <a class="go" href="https://github.com/Saurabhkaran11/Fresh-listing" target="_blank" rel="noopener">View repository →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Vault</h3>
+        <p>A personal knowledge and life hub — notes, YouTube saves, a reading library, documents, to-dos, sprint boards and personal finance. One quick-capture box files anything, everything links by project tag, and it all renders as a live force-directed graph with an analytics dashboard on top.</p>
+        <div class="chips"><span class="chip">Next.js</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span></div>
+        <div class="card-links">
+          <a class="go" href="https://github.com/Saurabhkaran11/vault" target="_blank" rel="noopener">View repository →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>MarketMirror</h3>
+        <p>Pressure-tests a founder's idea with cited research, a deliberately skeptical customer persona and a real voice conversation. Exa gathers evidence, Gemini synthesises the persona and a sharper product wedge, and Vapi runs the call with an ElevenLabs voice.</p>
+        <div class="chips"><span class="chip">TypeScript</span><span class="chip">Exa</span><span class="chip">Gemini</span><span class="chip">ElevenLabs</span></div>
+        <div class="card-links">
+          <a class="go" href="https://github.com/Saurabhkaran11/MarketMirror" target="_blank" rel="noopener">View repository →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge">🏆 1st place</span>
+        <h3>AI Blog Generator</h3>
+        <p>A custom MCP server plus prompt pipelines that research a topic and generate structured, publish-ready content end to end. First place at the VCnest AI Hackathon.</p>
+        <div class="chips"><span class="chip">TypeScript</span><span class="chip">MCP</span><span class="chip">OpenAI</span></div>
+        <div class="card-links">
+          <a class="go" href="https://github.com/Saurabhkaran11/blog-ai" target="_blank" rel="noopener">View repository →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge">Open source</span>
+        <h3>AI Engineering from Scratch</h3>
+        <p>An open reference manual for learning AI engineering — build it, ship it, and hand it to someone else. MIT licensed, with landing pages translated into twelve languages.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Education</span><span class="chip">MIT</span></div>
+        <div class="card-links">
+          <a class="go" href="https://github.com/Saurabhkaran11/ai-engineering-from-scratch" target="_blank" rel="noopener">View repository →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge">Hardware</span>
+        <h3>Uno Q Status Light</h3>
+        <p>An Arduino Uno Q reads a JSON authorization file on its Linux processor and drives a Modulino Pixels strip from its microcontroller, bridged over MessagePack-RPC. Green for authorized, red for anything else, violet when the bridge itself fails.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Arduino</span><span class="chip">RPC</span></div>
+        <div class="card-links">
+          <a class="go" href="https://github.com/Saurabhkaran11/Qualcomm-ml-infra-hackathon" target="_blank" rel="noopener">View repository →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="stack" class="reveal">
+  <div class="wrap">
+    <div class="eyebrow">// toolkit</div>
+    <h2>Stack</h2>
+    <div class="stack">
+      <div><h4>Languages</h4><div class="chips"><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">SQL</span></div></div>
+      <div><h4>Backend</h4><div class="chips"><span class="chip">FastAPI</span><span class="chip">Spring Boot</span><span class="chip">Node</span><span class="chip">Elasticsearch</span></div></div>
+      <div><h4>Frontend</h4><div class="chips"><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">Tailwind</span></div></div>
+      <div><h4>Data</h4><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Neon</span><span class="chip">MySQL</span><span class="chip">SQLite</span><span class="chip">Supabase</span></div></div>
+      <div><h4>AI &amp; agents</h4><div class="chips"><span class="chip">MCP</span><span class="chip">WebMCP</span><span class="chip">RAG</span><span class="chip">Strands SDK</span><span class="chip">Multi-agent</span></div></div>
+      <div><h4>Cloud</h4><div class="chips"><span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">Vercel</span><span class="chip">Docker</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="repos" class="reveal" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">// live from github</div>
+    <h2>Recently updated</h2>
+    <div class="grid" id="repoGrid">
+      <div class="repo"><span>Loading repositories…</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <div class="wrap">
+    <div class="contact">
+      <div class="eyebrow">// contact</div>
+      <h2 style="margin-bottom:14px">Let's build something.</h2>
+      <p>Hiring for backend, payments or applied-AI engineering? Or have an agentic-AI idea you want shipped? I'd like to hear about it.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:saurabhkaran11@gmail.com">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/saurabhagrawal11/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Saurabhkaran11" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="yr">2026</span> Saurabh (Karan) Agrawal · San Jose, CA</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* ---- avatar fallback: inline monogram if the photo can't load ---- */
+  var av = document.getElementById('avatar');
+  var MONOGRAM = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 190">' +
+    '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">' +
+    '<stop offset="0" stop-color="#5eead4"/><stop offset="1" stop-color="#818cf8"/>' +
+    '</linearGradient></defs>' +
+    '<rect width="190" height="190" rx="24" fill="url(#g)"/>' +
+    '<text x="95" y="122" font-family="Space Grotesk, Inter, sans-serif" font-size="78" font-weight="700" ' +
+    'fill="#0b0d12" text-anchor="middle">SA</text></svg>');
+  av.addEventListener('error', function handle() {
+    av.removeEventListener('error', handle);
+    av.src = MONOGRAM;
+  });
+  if (av.complete && av.naturalWidth === 0) av.src = MONOGRAM;
+
+  /* ---- theme toggle (safe if storage is blocked) ---- */
+  var root = document.documentElement, btn = document.getElementById('themeBtn');
+  try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch (e) {}
+  btn.addEventListener('click', function () {
+    var cur = root.getAttribute('data-theme');
+    var isDark = cur ? cur === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = isDark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+
+  /* ---- scroll reveal ---- */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ---- live repos from the GitHub API, with graceful fallback ---- */
+  var grid = document.getElementById('repoGrid');
+  var HIDE = ['saurabhkaran11.github.io', 'saurabhkaran11'];
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+
+  function fallback() {
+    grid.innerHTML = '<a class="repo" href="https://github.com/Saurabhkaran11?tab=repositories" target="_blank" rel="noopener">' +
+      '<b>Browse all repositories →</b><span>github.com/Saurabhkaran11</span></a>';
+  }
+
+  fetch('https://api.github.com/users/Saurabhkaran11/repos?sort=updated&per_page=20')
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (repos) {
+      if (!Array.isArray(repos)) throw new Error('bad payload');
+      var list = repos.filter(function (r) {
+        return !r.fork && HIDE.indexOf(r.name.toLowerCase()) === -1;
+      }).slice(0, 8);
+      if (!list.length) return fallback();
+      grid.innerHTML = list.map(function (r) {
+        var when = new Date(r.pushed_at).toLocaleDateString(undefined, { month: 'short', year: 'numeric' });
+        return '<a class="repo" href="' + esc(r.html_url) + '" target="_blank" rel="noopener">' +
+               '<b>' + esc(r.name) + '</b><span>' + esc(r.language || '—') + ' · ' + when + '</span></a>';
+      }).join('');
+    })
+    .catch(fallback);
+
+  fetch('https://api.github.com/users/Saurabhkaran11')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (u) { if (u && u.public_repos) document.getElementById('repoCount').textContent = u.public_repos; })
+    .catch(function () {});
+})();
+</script>
+</body>
+</html>
